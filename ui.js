@@ -30,9 +30,9 @@ export default class UI {
       { selector: '#btn-badan', cb: this.showPopup.bind(this, 'bagian') },
       { selector: '#btn-perangkat', cb: this.showPopup.bind(this, 'perangkat-daerah') },
       { selector: '#button_team', cb: this.showPopup.bind(this, 'team', this.initSlider, this.destroySlider) },
-
-      { selector: '.test', cb: this.showSubPopup.bind(this, 'subpop-badan') },
+      { selector: '#test', cb: this.showSubPopup.bind(this, 'subpop-badan') },
     ]
+
     events.forEach(event => {
       const element = uiWrapper.querySelector(event.selector)
       if (element) {
@@ -135,7 +135,7 @@ export default class UI {
     if (event.target !== event.currentTarget) return
     subPopup.classList.remove('subpopup--active')
     subPopup.classList.remove('subpopup--animated')
-    subPopup.removeEventListener('click', this.hidePopup)
+    subPopup.removeEventListener('click', this.hideSubPopup)
     constructorCb().blockSceneScrolling(false)
     if (typeof subPopup._eventParameter === 'function') subPopup._eventParameter()
   }

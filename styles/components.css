@@ -21,6 +21,8 @@
 }
 .button__text {
   z-index: 1;
+  color: #FFF !important;
+  font-weight: 400;
 }
 
 .button--primary {
