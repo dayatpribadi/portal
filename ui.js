@@ -10,6 +10,7 @@ let followElementsPositions = []
 let videoElementSource = ''
 let slider = null
 let popup = null
+let subPopup = null
 
 export default class UI {
   constructor (callback) {
@@ -28,9 +29,9 @@ export default class UI {
       { selector: '#btn-besmart', cb: this.showPopup.bind(this, 'besmart') },
       { selector: '#btn-badan', cb: this.showPopup.bind(this, 'bagian') },
       { selector: '#btn-perangkat', cb: this.showPopup.bind(this, 'perangkat-daerah') },
+      { selector: '#button_team', cb: this.showPopup.bind(this, 'team', this.initSlider, this.destroySlider) },
 
-      { selector: '.test', cb: this.showPopup.bind(this, 'subpop-badan') },
-      { selector: '#button_team', cb: this.showPopup.bind(this, 'team', this.initSlider, this.destroySlider) }
+      { selector: '.test', cb: this.showSubPopup.bind(this, 'subpop-badan') },
     ]
     events.forEach(event => {
       const element = uiWrapper.querySelector(event.selector)
@@ -106,6 +107,21 @@ export default class UI {
     }, 0)
   }
 
+  showSubPopup (popupType, createCallback, destroyCallback) {
+    if (typeof createCallback === 'function') createCallback() 
+    subPopup = uiWrapper.querySelector(`[data-subpopup=${popupType}]`)
+    subPopup.classList.add('subpopup--active')
+    // First remove display: none, then add animated class;
+    setTimeout(() => {
+      subPopup.classList.add('subpopup--animated')
+      subPopup.addEventListener('click', this.hideSubPopup)
+      // Add parameter to prototype, so listener can be removed;
+      subPopup._eventParameter = destroyCallback
+      constructorCb().blockSceneScrolling(true)
+      this.getFollowElementsPosition()
+    }, 0)
+  }
+
   hidePopup (event) {
     if (event.target !== event.currentTarget) return
     popup.classList.remove('popup--active')
@@ -113,6 +129,15 @@ export default class UI {
     popup.removeEventListener('click', this.hidePopup)
     constructorCb().blockSceneScrolling(false)
     if (typeof popup._eventParameter === 'function') popup._eventParameter()
+  }
+  
+  hideSubPopup (event) {
+    if (event.target !== event.currentTarget) return
+    subPopup.classList.remove('subpopup--active')
+    subPopup.classList.remove('subpopup--animated')
+    subPopup.removeEventListener('click', this.hidePopup)
+    constructorCb().blockSceneScrolling(false)
+    if (typeof subPopup._eventParameter === 'function') subPopup._eventParameter()
   }
 
   initSlider () {
