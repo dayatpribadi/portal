@@ -106,6 +106,9 @@
   transition: transform 600ms ease;
 }
 
+/* .button--secondary:hover {
+  color: var(--primaryColor);
+} */
 
 /* BURGER BUTTON */
 .burger {
