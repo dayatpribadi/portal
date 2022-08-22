@@ -264,6 +264,8 @@ p {
   z-index: 1;
 }
 
+
+
 .subpopup {
   width: 100%;
   height: 100%;
@@ -306,6 +308,7 @@ p {
   overflow-y: auto;
   color: #000 !important;
 }
+
 
 .popup__inner {
   text-align: justify;
@@ -1460,4 +1463,41 @@ figure {
 
 .button--secondary.btn-pimpinan {
   border: 1px solid #000;
+}
+
+
+img.image__banner {
+  align-items: center;
+  width: 100%;
+  height: 50vh;
+  background-size: contain;
+  border: 3px solid #FFF;
+  border-radius: 10px;
+}
+
+/* .as-panel {
+  box-shadow: -5px -3px 5px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: -5px -3px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: -5px -3px 5px 0px rgba(0,0,0,0.75);
+} */
+
+
+.welcome-title h1 {
+  font-family: 'Pacifico' !important;
+  font-size: 45px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  background: #0085eb; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #0085eb, #9932cc); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #0085eb, #9932cc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.welcome-title span {
+  font-family: 'Rubik' !important;
+  font-size: 30px;
+  font-weight: 700;
+
 }

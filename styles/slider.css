@@ -12,7 +12,6 @@
   width: 100%;
   display: flex;
   transition: 300ms ease;
-  justify-content: center;
 }
 
 .slider__item {
