@@ -1052,6 +1052,7 @@ img.icon-opd:hover {
     height: 150px;
     left: 50%;
   }
+
   .content-section__image-holder:nth-of-type(1) {
     transform: translate(-100%, -50%);
   }
@@ -1098,13 +1099,24 @@ img.icon-opd:hover {
   .subpopup {
     align-items: flex-end;
   }
-  
 
 }
 
 @media only screen and (max-width: 1000px) {
   .content {
-    width: 90%;
+    width: 100%;
+  }
+
+  .welcome-title span {
+    font-family: 'Rubik' !important;
+    font-size: 11px !important;
+    font-weight: 700;
+  }
+
+  .welcome-title h1 {
+    font-size: 25px !important;
+    font-weight: 600;
+
   }
 
   .fixed-content-paging {
@@ -1237,6 +1249,8 @@ img.icon-opd:hover {
   .content-section__text-team {
     margin-bottom: 17px;
   }
+
+
 }
 
 
