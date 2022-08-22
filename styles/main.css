@@ -450,7 +450,7 @@ iframe {
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 5% 5% 0 5%;
+  padding: 2% 5% 0 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -518,7 +518,7 @@ iframe {
   position: fixed;
   bottom: 0;
   width: 100%;
-  padding: 0 5% 5% 5%;
+  padding: 0 5% 3% 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
