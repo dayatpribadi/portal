@@ -822,7 +822,7 @@ iframe {
   content: '';
   width: 100%;
   height: 0;
-  background-color: #00afef33;
+  background-color: #00afef1a;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -846,8 +846,8 @@ iframe {
   transition: 200ms var(--contentTransitionBezier);
 }
 .content-services__service:hover .content-service__image {
-  transform: translateY(-40px);
-  opacity: 0;
+  transform: translateY(-20px);
+  opacity: 1;
   transition: 200ms var(--contentTransitionBezier);
   z-index: 100;
 }
