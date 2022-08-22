@@ -10,6 +10,7 @@
   left: 0;
   height: 100%;
   width: 100%;
+  justify-content: center;
   display: flex;
   transition: 300ms ease;
 }
@@ -28,7 +29,7 @@
 .slider__item-image {
   width: 100%;
   object-fit: cover;
-  opacity: 0;
+  opacity: 1;
 }
 
 .slider__item-content {
@@ -146,7 +147,7 @@
 
 @media only screen and (max-width: 769px) {
   .slider__item {
-    min-width: 50%
+    min-width: 50%;
   }
   .slider__item-name {
     padding-top: 15px;
