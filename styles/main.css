@@ -1,34 +1,3 @@
-/* @font-face {
-  font-family: Roboto;
-  font-weight: 400;
-  src: url(../resources/fonts/Roboto-Thin.ttf);
-}
-@font-face {
-  font-family: Roboto;
-  font-weight: 500;
-  src: url(../resources/fonts/Roboto-Light.ttf);
-}
-@font-face {
-  font-family: Roboto;
-  font-weight: 600;
-  src: url(../resources/fonts/Roboto-Regular.ttf);
-}
-@font-face {
-  font-family: Roboto;
-  font-weight: 700;
-  src: url(../resources/fonts/Roboto-Medium.ttf);
-}
-@font-face {
-  font-family: Roboto;
-  font-weight: 800;
-  src: url(../resources/fonts/Roboto-Bold.ttf);
-}
-@font-face {
-  font-family: Roboto;
-  font-weight: 900;
-  src: url(../resources/fonts/Roboto-Black.ttf);
-} */
-
 :root {
   --primaryColor: #0077ff;
   --primaryBoldColor: #ffb700;
@@ -454,8 +423,22 @@ iframe {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 0;
+  z-index: 100;
+
 }
+
+/* .fixed-content-header::before {
+  position: absolute;
+  content: "";
+  background: url(../resources/images/bg/Mandala_62.png);
+  background-size: contain;
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 8% 0 0 0;
+  z-index: -999;
+} */
 
 .fixed-content-header__contact {
   opacity: 1 !important;
@@ -522,7 +505,7 @@ iframe {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 0;
+  z-index: 11;
 }
 
 .social-links__anchor {
@@ -587,7 +570,7 @@ iframe {
 .scroll-letters {
   display: flex;
   position: absolute;
-  bottom: 0;
+  bottom: -40px;
   overflow: hidden;
 }
 .scroll-letters__letter {
@@ -651,12 +634,49 @@ iframe {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 60%;
+  width: 100%;
   max-width: 1250px;
-  height: 80%;
+  height: 100%;
+  z-index: 1;
 }
 
+.content::before{
+  content: " ";
+  position: relative;
+  top: 50%;
+  left: -10%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 1250px;
+  height: 100%;
+  background: url(../resources/images/bg/Mandala_62.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: -99;
+}
+
+
 .content-section {
+  z-index: 0;
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transform: translate3d(0, 0, 0);
+  transition: 100ms ease-out;
+}
+
+.section--banner {
+  margin-top: -30px;
+  /* padding-left: 60px;
+  padding-right: 60px; */
   width: 100%;
   height: 100%;
   display: flex;
@@ -666,7 +686,11 @@ iframe {
   text-align: center;
   transform: translate3d(0, 0, 0);
   transition: 100ms ease-out;
+  z-index: 1000;
 }
+
+
+
 .content-section.section--hidden {
   display: none;
   opacity: 0;
@@ -679,7 +703,7 @@ iframe {
 }
 
 .content-section__images .content-section__image-holder span {
-  color:rgb(34, 34, 34);
+  color:rgb(33, 12, 12);
   font-size: 11px;
   font-weight: 800;
   background-color: #ffb700;
@@ -902,9 +926,9 @@ img.icon-opd:hover {
 
 .card-body a {
   font-family: "Rubik" !important;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
-  color:rgba(0, 0, 0, 1)
+  color:rgba(0, 0, 0, 1);
 }
 
 .card-body a:hover {
@@ -962,14 +986,6 @@ img.icon-opd:hover {
   transform: translate(200px, -50%);
   transition: 400ms 150ms var(--contentTransitionBezier);
 }
-/* .content-section__image-holder:nth-of-type(3) {
-  transform: translate(200px, -50%);
-  transition: 400ms 200ms var(--contentTransitionBezier);
-}
-.content-section__image-holder:nth-of-type(4) {
-  transform: translate(300px, -50%);
-  transition: 400ms 250ms var(--contentTransitionBezier);
-} */
 
 .content-section__image {
   width: 100%;
@@ -1047,6 +1063,25 @@ img.icon-opd:hover {
 /***** MEDIA QUERIES *****/
 
 @media only screen and (max-width: 1200px) {
+  .content::before{
+    content: " ";
+    position: relative;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 1250px;
+    height: 100%;
+    background: url(../resources/images/bg/Mandala_62.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: -99;
+  }
+
   .content-section__image-holder {
     width: 150px;
     height: 150px;
@@ -1100,6 +1135,10 @@ img.icon-opd:hover {
     align-items: flex-end;
   }
 
+  .content-section.section--banner {
+    display: none;
+  }
+
 }
 
 @media only screen and (max-width: 1000px) {
@@ -1114,7 +1153,7 @@ img.icon-opd:hover {
   }
 
   .welcome-title h1 {
-    font-size: 25px !important;
+    font-size: 20px !important;
     font-weight: 600;
 
   }
@@ -1236,6 +1275,7 @@ img.icon-opd:hover {
 
 /* Minimum device height; */
 @media only screen and (max-height: 450px) {
+
   .content-services,
   .content-section__images,
   .content-portfolio__images {
@@ -1245,11 +1285,9 @@ img.icon-opd:hover {
   .content-holder--left-align {
     flex-basis: 100%;
   }
-
   .content-section__text-team {
     margin-bottom: 17px;
   }
-
 
 }
 
@@ -1480,14 +1518,14 @@ figure {
 }
 
 
-img.image__banner {
+/* img.image__banner {
   align-items: center;
   width: 100%;
   height: 50vh;
   background-size: contain;
   border: 3px solid #FFF;
   border-radius: 10px;
-}
+} */
 
 /* .as-panel {
   box-shadow: -5px -3px 5px 0px rgba(0,0,0,0.75);
@@ -1513,5 +1551,137 @@ img.image__banner {
   font-family: 'Rubik' !important;
   font-size: 30px;
   font-weight: 700;
-
 }
+
+
+/* Mobile Pottrait */
+@media (min-height: 320px), screen and (orientation: portrait) { 
+  .content::before{
+    content: " ";
+    position: relative;
+    top: 70%;
+    left: -20%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 1250px;
+    height: 100%;
+    background: url(../resources/images/bg/Mandala_62.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: -99;
+  }
+ }
+
+
+/* Mobile Landscape */
+ @media (min-height: 480px), screen and (orientation: landscape) { 
+  .content::before{
+    content: " ";
+    position: relative;
+    top: 50%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 1250px;
+    height: 100%;
+    background: url(../resources/images/bg/Mandala_62.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: -99;
+  }
+ }
+
+ /* Tablet Potrait */
+ @media (min-height: 600px), screen and (orientation: potrait) { 
+  .content::before{
+    content: " ";
+    position: relative;
+    top: 60%;
+    left: -15%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 1250px;
+    height: 100%;
+    background: url(../resources/images/bg/Mandala_62.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: -99;
+  }
+ }
+
+ @media (min-height: 800px), screen and (orientation: landscape) { 
+  .content::before{
+    content: " ";
+    position: relative;
+    top: 60%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 1250px;
+    height: 100%;
+    background: url(../resources/images/bg/Mandala_62.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: -99;
+  }
+ }
+
+ @media (min-height: 768px), screen and (orientation: potrait) { 
+  .content::before{
+    content: " ";
+    position: relative;
+    top: 60%;
+    left: -10%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 1250px;
+    height: 100%;
+    background: url(../resources/images/bg/Mandala_62.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: -99;
+  }
+ }
+
+ @media (min-height: 1024px), screen and (orientation: landscape) { 
+  .content::before{
+    content: " ";
+    position: relative;
+    top: 60%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 1250px;
+    height: 100%;
+    background: url(../resources/images/bg/Mandala_62.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: -99;
+  }
+ }
+
+
