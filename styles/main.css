@@ -643,22 +643,12 @@ iframe {
 .content::before{
   content: " ";
   position: relative;
-  top: 50%;
-  left: -10%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  max-width: 1250px;
-  height: 100%;
   background: url(../resources/images/bg/Mandala_62.png);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   opacity: 0.8;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: -99;
-}
 
+}
 
 .content-section {
   z-index: 0;
