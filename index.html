@@ -17,18 +17,19 @@
 
   </head>
 	<body>
-  
-  
 
     <!-- MAIN UI ELEMENTS -->
     <main class="ui-wrapper page-not-loaded">
+
+      <!-- <video class="video-bg" playsinline autoplay muted loop poster="my-static-image.jpg">
+        <source src="resources/audio/videoi.mp4" type="video/mp4">
+    </video> -->
+    
 
       <!-- LOADER -->
       <div class="loader flex flex--center">
         <span class="loader__text">BANGKIT DIGITAL</span>
       </div>
-
-      
 
       <!-- MAIN MENU -->
       <div class="menu">
@@ -60,19 +61,20 @@
         </div>
       </header>
 
+      <div class="ornament"></div>
+      <div class="orne__ornament"></div>
 
-
-      <div class="content-section section--banner" data-page="0">
+      <div class="content-section section--banner" id="top" data-page="0">
         <div class="welcome-title">
           <h1 style="font-family: 'Pacifico' !important;">Portal Resmi</h1>
           <span>PEMERINTAH DAERAH KABUPATEN OGAN ILIR</span>
         </div>
-  
+
         <div id="example1" class="accordion-slider">
           <div class="as-panels">
             <div class="as-panel">
               <a href="#">
-                <img class="as-background" src="resources/images/banner/banner3.jpg" />
+                <img class="as-background" src="resources/images/banner/6x2 hut ri 77 -min_101020.jpg" />
               </a>
               <div class="as-layer as-closed as-white as-vertical panel-counter"
               data-position="bottomLeft" data-horizontal="8" data-vertical="8">
@@ -82,7 +84,7 @@
   
             <div class="as-panel">
               <a href="#">
-                <img class="as-background" src="resources/images/banner/banner3.jpg" />
+                <img class="as-background" src="resources/images/banner/6X2 TTG -min_100955.jpg" />
               </a>
               <div class="as-layer as-closed as-white as-vertical panel-counter"
               data-position="bottomLeft" data-horizontal="8" data-vertical="8">
@@ -127,8 +129,6 @@
       <!-- MAIN CONTENT -->
       <div class="content">
 
-
-
         <!-- HALAMAN 1 DEPAN -->
         <div class="content-section" data-page="0">
 
@@ -148,7 +148,7 @@
         </div>
 
         <!-- HALAMAN MENU PORTAL / MENU LAYANAN -->
-        <div class="content-section section--hidden" data-page="1">
+        <div class="content-section section--hidden"  data-page="1">
           <div class="content-services">
             <div class="content-services__service">
               <img class="content-service__image" src="./resources/images/icons/skyline.gif" alt="Marketing icon" />
@@ -248,6 +248,7 @@
           </div>
 
         </div>
+        
       </div>
 
       <!-- MODAL PROFIL POPUP -->
@@ -320,10 +321,8 @@
           <span class="footer-copy__date"></span>
           <span class="footer-copy__name">Diskominfotiksan Kabupaten Ogan Ilir</span>
         </div>
-
+          <button onclick="topFunction()" class="myBtn__cta">top</button>
       </div>
-
-     
 
     </main>
 
@@ -375,6 +374,15 @@
         });
       });
     </script>
+
+    <script>
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+
+
 
     <!-- MODAL MENU LEVEL 1 -->
     <div class="modal" id="staticBackdrop" role="document" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel">

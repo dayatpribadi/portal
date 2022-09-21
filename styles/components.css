@@ -114,6 +114,7 @@
 
 /* BURGER BUTTON */
 .burger {
+  z-index: 111;
   width: 35px;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
@@ -138,6 +139,7 @@
 }
 
 .burger__line {
+  z-index: 111;
   width: 100%;
   height: 3px;
   margin-bottom: 7px;

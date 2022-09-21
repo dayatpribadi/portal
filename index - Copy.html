@@ -34,8 +34,8 @@
       <!-- MAIN MENU -->
       <div class="menu">
         <ul class="menu-list">
-          <li class="menu-list__item" data-page="1">PROFIL DAERAH</li>
-          <li class="menu-list__item" data-page="2">PERANGKAT DAERAH</li>
+          <li class="menu-list__item" data-page="1">PERANGKAT DAERAH</li>
+          <li class="menu-list__item" data-page="2">PROFIL DAERAH</li>
           <li class="menu-list__item" data-page="3">KEPALA DAERAH</li>
           <li class="menu-list__item" data-page="4">INFORMASI</li>
           <li class="menu-list__item" data-page="5">KONTAK</li>
@@ -134,7 +134,7 @@
             <div class="popup__offer bagian">
               <div class="row justify-content-center">
 
-                <div class="col-6 col-md-3 text-center mb-4">
+                <div class="col-6 col-md-2 text-center mb-4">
                   <div class="card justify-content-center">
                       <a href="#">
                         <img class="icon-opd" src="resources/images/off.png" alt="">
@@ -571,8 +571,6 @@
       </div>
 
       <!-- MAIN CONTENT -->
-
-
       <div class="content">
         <!-- <video autoplay>
           <source src="./resources/audio/PTSP1.mp4" type="video/mp4">
@@ -653,7 +651,7 @@
           </div>
 
         </div>
-        <div class="content-section section--hidden" data-page="1">
+        <div class="content-section section--hidden" data-page="2">
           <h1 class="content-section__title">TENTANG KABUPATEN OGAN ILIR</h1>
           <p class="content-section__text">
             Kabupaten Ogan Ilir adalah salah satu kabupaten di Provinsi Sumatra Selatan. Ogan Ilir berada di jalur lintas timur Sumatra dan pusat pemerintahannya terletak sekitar 35 km dari Kota Palembang. 
@@ -663,12 +661,14 @@
             <span class="button__text">PROFIL KABUPATEN</span>
           </button>
         </div>
-        <div class="content-section section--hidden" data-page="2">
-        
+
+
+        <div class="content-section section--hidden" data-page="1">
           <div class="content-services">
             <div class="content-services__service">
               <img class="content-service__image" src="./resources/images/smart-city.png" alt="Marketing icon" />
-              <button id="btn-besmart" class="content-section__button button button--secondary">SMART CITY</button>
+              <!-- <button id="btn-besmart" class="content-section__button button button--secondary">SMART CITY</button> -->
+              <a class="content-section__button button button--secondary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first modal</a>
             </div>
             <div class="content-services__service">
               <img class="content-service__image" src="./resources/images/layanan-publik.png" alt="Marketing icon" />
@@ -678,10 +678,8 @@
               <img class="content-service__image" src="./resources/images/icons/Stock-Exchange-World.png" alt="Marketing icon" />
               <button id="btn-perangkat" class="content-section__button button button--secondary">PERANGKAT DAERAH</button>
             </div>
-
           </div>
           <!-- <button class="content-section__button button button--secondary" id="button_offers">LIHAT SEMUA</button> -->
-          
         </div>
 
         <div class="content-section section--hidden content-section--left-align" data-page="3">
@@ -775,6 +773,174 @@
         </div>
       </div>
 
+        <!-- MODAL MENU LEVEL 1 -->
+        <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalToggleLabel">MODAL MENU LEVEL 1</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body p-5">
+                <div class="row justify-content-center">
+                  <div class="col-6 col-md-2 text-center mb-4">
+                    <div class="card justify-content-center">
+                          <a href="#" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">
+                            <img class="icon-opd" src="resources/images/icons/dinas.png" alt="">
+                          </a>
+                        <div class="card-body">
+                          <a href="#" class="card-text">Dinas</a>
+                        </div>
+                    </div>
+                  </div>
+        
+                  <div class="col-6 col-md-2 text-center mb-4">
+                    <div class="card justify-content-center">
+                          <a href="#">
+                            <img class="icon-opd" src="resources/images/icons/badan.png" alt="">
+                          </a>
+                        <div class="card-body">
+                          <a href="#" class="card-text">Badan</a>
+                        </div>
+                    </div>
+                  </div>
+        
+                  <div class="col-6 col-md-2 text-center mb-4">
+                    <div class="card justify-content-center">
+                          <a href="#">
+                            <img class="icon-opd" src="resources/images/icons/sekretariat.png" alt="">
+                          </a>
+                        <div class="card-body">
+                          <a href="#" class="card-text">Sekretariat</a>
+                        </div>
+                    </div>
+                  </div>
+        
+                  <div class="col-6 col-md-2 text-center  mb-4">
+                    <div class="card justify-content-center">
+                          <a href="#">
+                            <img class="icon-opd" src="resources/images/icons/dinas.png" alt="">
+                          </a>
+                        <div class="card-body">
+                          <a href="#" class="card-text">Kecamatan</a>
+                        </div>
+                    </div>
+                  </div>
+        
+                  <div class="col-6 col-md-2 text-center justify-content-between mb-4">
+                    <div class="card justify-content-center">
+                          <a href="#">
+                            <img class="icon-opd" src="resources/images/icons/dinas.png" alt="">
+                          </a>
+                        <div class="card-body">
+                          <a href="#" class="card-text">Desa / Kelurahan</a>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+        
+                  <!-- <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Open second modal</button> -->
+              </div>
+        
+            </div>
+          </div>
+        </div>
+      
+        <!-- MODAL MENU LEVEL 2 -->
+        <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+          <div class="modal-dialog modal-xl modal-dialog-centered ">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalToggleLabel2">MODAL MENU LEVEL 2</h5>
+                <button type="button" class="btn-close" data-bs-toggle="modal" href="#exampleModalToggle" role="button"></button>
+              </div>
+              <div class="modal-body p-4">
+                <div class="row justify-content-center">
+                  <div class="col-6 col-md-2 text-center mb-4">
+                    <div class="card justify-content-center">
+                          <a href="#">
+                            <img class="icon-opd" src="resources/images/icons/dinas.png" alt="">
+                          </a>
+                        <div class="card-body">
+                          <a href="#" class="card-text">BKPSDM</a>
+                        </div>
+                    </div>
+                  </div>
+        
+                  <div class="col-6 col-md-2 text-center mb-4">
+                    <div class="card justify-content-center">
+                          <a href="#">
+                            <img class="icon-opd" src="resources/images/icons/badan.png" alt="">
+                          </a>
+                        <div class="card-body">
+                          <a href="#" class="card-text">BAPPEDA</a>
+                        </div>
+                    </div>
+                  </div>
+        
+                  <div class="col-6 col-md-2 text-center mb-4">
+                    <div class="card justify-content-center">
+                          <a href="#">
+                            <img class="icon-opd" src="resources/images/icons/sekretariat.png" alt="">
+                          </a>
+                        <div class="card-body">
+                          <a href="#" class="card-text">BAPENDA</a>
+                        </div>
+                    </div>
+                  </div>
+        
+                  <div class="col-6 col-md-2 text-center mb-4">
+                    <div class="card justify-content-center">
+                          <a href="#">
+                            <img class="icon-opd" src="resources/images/icons/dinas.png" alt="">
+                          </a>
+                        <div class="card-body">
+                          <a href="#" class="card-text">BALITBANG</a>
+                        </div>
+                    </div>
+                  </div>
+        
+                  <div class="col-6 col-md-2 text-center mb-4">
+                    <div class="card justify-content-center">
+                          <a href="#">
+                            <img class="icon-opd" src="resources/images/icons/dinas.png" alt="">
+                          </a>
+                        <div class="card-body">
+                          <a href="#" class="card-text">BPKAD</a>
+                        </div>
+                    </div>
+                  </div>
+        
+                  <div class="col-6 col-md-2 text-center mb-4">
+                    <div class="card justify-content-center">
+                          <a href="#">
+                            <img class="icon-opd" src="resources/images/icons/dinas.png" alt="">
+                          </a>
+                        <div class="card-body">
+                          <a href="#" class="card-text">BPBD</a>
+                        </div>
+                    </div>
+                  </div>
+        
+                  <div class="col-6 col-md-2 text-center justify-content-between mb-4">
+                    <div class="card justify-content-center">
+                          <a href="#">
+                            <img class="icon-opd" src="resources/images/icons/dinas.png" alt="">
+                          </a>
+                        <div class="card-body">
+                          <a href="#" class="card-text">KESBANGPOL</a>
+                        </div>
+                    </div>
+                  </div>
+        
+                </div>
+        
+              </div>
+            </div>
+          </div>
+        </div>  
+
+
     </main>
 
     <script type="module" src="main.js"></script>
@@ -823,6 +989,9 @@
         });
       });
     </script>
+
+
+
 
 	</body>
 </html>

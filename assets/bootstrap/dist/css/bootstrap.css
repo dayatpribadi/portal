@@ -5464,7 +5464,7 @@ textarea.form-control-lg {
   width: 100%;
   height: 100%;
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: hidden;
   outline: 0;
 }
 
@@ -5498,7 +5498,7 @@ textarea.form-control-lg {
   overflow: hidden;
 }
 .modal-dialog-scrollable .modal-body {
-  overflow-y: auto;
+  overflow-y: hidden;
 }
 
 .modal-dialog-centered {
@@ -5513,11 +5513,14 @@ textarea.form-control-lg {
   flex-direction: column;
   width: 100%;
   pointer-events: auto;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 1);
   background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 0.3rem;
+  /* border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.3rem; */
   outline: 0;
+  box-shadow: -7px 2px 35px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: -7px 2px 35px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: -7px 2px 35px 0px rgba(0,0,0,0.75);
 }
 
 .modal-backdrop {
@@ -5540,9 +5543,9 @@ textarea.form-control-lg {
   display: flex;
   flex-shrink: 0;
   align-items: center;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   padding: 1rem 1rem;
-  border-bottom: 1px solid #dee2e6;
+  /* border-bottom: 1px solid #dee2e6; */
   border-top-left-radius: calc(0.3rem - 1px);
   border-top-right-radius: calc(0.3rem - 1px);
 }

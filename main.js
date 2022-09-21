@@ -1,12 +1,12 @@
 //// Main site configuration. ////
 const configuration = {
-  SiteName: '',
+  SiteName: 'OGAN ILIR',
   Use2DTextOver3D: false, // Change to true if you want 2D over 3D
   SiteNameSize: 0.7, // Between 0 and +
-  NumberOfVerticalLines: 25,
-  NumberOfDots: 5000,
+  NumberOfVerticalLines: 35,
+  NumberOfDots: 10000,
   colors: {
-    CanvasBackgroundColor: '#E8F9FD',
+    CanvasBackgroundColor: '#FFF',
     LettersColor: '#0096FF',
     LinesColors: ['#1F4690', '#0096FF', '#0e5f01'],
     LowerLinesColors: ['#027afe'],
